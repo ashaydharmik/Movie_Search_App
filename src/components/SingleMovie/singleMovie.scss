@@ -1,0 +1,174 @@
+@import "../css-config/mixins.scss";
+
+.single-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  @include md {
+    height: 100vh;
+  }
+  .movie {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include md {
+      background-color: rgb(55, 55, 55);
+      flex-direction: row;
+      width: 900px;
+      height: 390px;
+      margin: 0 100px 0 100px;
+      padding: 50px;
+      justify-content: space-between;
+      gap: 50px;
+      border-radius: 10px;
+    }
+    .image {
+      img {
+        width: 300px;
+        height: 300px;
+        filter: drop-shadow(-1px -2px 10px white);
+        @include md {
+          height: 350px;
+        }
+      }
+    }
+    .desc {
+      .title {
+        h1 {
+          font-size: 28px;
+          color: yellow;
+          margin: 15px 0 10px 0;
+          @include md {
+            text-align: center;
+            padding-bottom: 5px;
+          }
+        }
+      }
+      .genre {
+        text-align: center;
+        margin: 10px 0 10px 0;
+        border: 1px solid white;
+        padding: 5px;
+        font-weight: bold;
+        box-shadow: 0px 1px 5.2px white;
+      }
+      .date {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0 10px 0;
+        letter-spacing: 1px;
+        span {
+          text-decoration: underline;
+          @include md {
+            text-decoration: none;
+            font-weight: bold;
+          }
+        }
+        .rating {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          svg {
+            padding-top: 5px;
+            color: yellow;
+          }
+        }
+      }
+      .runtime {
+        margin: 10px 0 10px 0;
+        letter-spacing: 1px;
+        @include md {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        span {
+          text-decoration: underline;
+          @include md {
+            text-decoration: none;
+            font-weight: bold;
+          }
+        }
+        p {
+          margin-bottom: 10px;
+        }
+      }
+      .tagline {
+        margin: 10px 0 10px 0;
+        span {
+          text-decoration: underline;
+          @include md {
+            text-decoration: none;
+            font-weight: bold;
+          }
+        }
+        p {
+          text-align: justify;
+          line-height: 22px;
+        }
+      }
+      .overview {
+        margin: 10px 0 10px 0;
+        span {
+          text-decoration: underline;
+          @include md {
+            text-decoration: none;
+            font-weight: bold;
+          }
+        }
+        p {
+          text-align: justify;
+          line-height: 22px;
+        }
+      }
+      .buttons {
+        margin: 15px 0 10px 0;
+        @include md {
+          margin: 20px 0 10px 0;
+        }
+        button {
+          background-color: rgb(18 17 17 / 83%);
+          color: white;
+          font-weight: 600;
+          box-shadow: 5px 5px 0 rgb(157 153 153 / 96%);
+          border-radius: 5px;
+          transition: transform 0.2s, box-shadow 0.2s;
+          letter-spacing: 1px;
+          cursor: pointer;
+          filter: drop-shadow(-1px 1px 4px rgb(128, 128, 128));
+          width: 114px;
+          height: 38px;
+          font-size: 16px;
+          @include md {
+            height: 35px;
+            width: 124px;
+            border: 1px solid white;
+          }
+        }
+        button:active {
+          box-shadow: 0 0 0 rgb(88 0 109 / 96%);
+          transform: translateX(4px) translateY(4px);
+        }
+      }
+    }
+  }
+}
+
+.loading-movie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 100vh;
+  .loading-word {
+    font-size: 30px;
+    color: white;
+  }
+}

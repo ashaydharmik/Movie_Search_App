@@ -1,0 +1,67 @@
+@import "../css-config/mixins.scss";
+
+.listMovie-container {
+  .movie-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    a {
+      text-decoration: none;
+    }
+    @include md {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .card {
+      height: 300px;
+      margin: 10px;
+      padding: 16px 26px;
+      border-radius: 10px;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: #009fff;
+      background: -webkit-linear-gradient(to right, #ec2f4b, #009fff);
+      background: linear-gradient(to right, #ec2f4b, #009fff);
+      @include md {
+        margin: 10px;
+        padding: 10px;
+        gap: 15px;
+      }
+
+      .card-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &:hover {
+          transition: transform 0.3s ease;
+          transform: scale(1.1);
+        }
+
+        h1 {
+          color: yellow;
+          padding-bottom: 10px;
+          @include md {
+            font-size: 18px;
+            text-align: center;
+          }
+        }
+        img {
+          filter: drop-shadow(5px 5px 10px black);
+          width: 250px;
+          height: 250px;
+          &:hover {
+            border: 1px solid white;
+          }
+          @include md {
+            width: 200px;
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}
